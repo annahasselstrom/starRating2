@@ -30,10 +30,6 @@ export const StarRating = ({
     
     //const [selectedStars, setSelectedStars] = useState(0);
     //const totalStars = 5;
-<<<<<<< HEAD
-
-=======
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
     return [
         <div style={{ margin: "20px", padding: "5px", ...style }} {...props}>
             
