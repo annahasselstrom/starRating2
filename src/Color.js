@@ -33,7 +33,12 @@ export const Color = ({
     rating,
     onRemove = f => f,
     onRate = f => f
+<<<<<<< HEAD
 }) => {
+=======
+  }) => {
+
+>>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
     return (
         <section>
             <h1>{title}</h1>
