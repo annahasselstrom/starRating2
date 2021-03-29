@@ -12,10 +12,7 @@ import { FaStar } from 'react-icons/fa';
 // f => f är en falsk funktion som inte gör något - vi behöver denna default
 // funktion annars får vi fel när vi  klickar på FaStar-komponententen
 // Detta eftersom onSelects värde MÅSTE vara en funktion
-export const Star = ({
-    selected = false,
-    onSelect = f => f
-}) => (
+export const Star = ({ selected = false, onSelect = f => f }) => (
     <FaStar
         color={selected ? "red" : "pink"}
         onClick={onSelect}

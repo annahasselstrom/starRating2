@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-import React, { useContext } from 'react';
-import { ColorContext } from './';
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
 import { Color } from './Color';
 
 {/*
@@ -26,7 +21,6 @@ Addera onRate:
 - skickar upp detta till ColorLists parent (App) via the onRateColor
   funktion propertyn
 */}
-<<<<<<< HEAD
 export const ColorList = ({
     colors = [],
     onRemoveColor = f => f,
@@ -50,18 +44,4 @@ export const ColorList = ({
         </div>
     );
 
-=======
-export const ColorList = () => {
-  const { colors } = useContext(ColorContext);
-    if (!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
-    //console.log(colors)
-    
-    return (
-      <div className="color-list">
-        {
-          colors.map(color => <Color key={color.id} {...color} />)
-        }
-      </div>
-    )
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
 };

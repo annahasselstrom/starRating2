@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import colorData from './colorData.json';
 import { ColorList } from './ColorList.js';
 import { AddColorForm } from 'AddColorForm';
 import { v4 } from 'uuid';
-=======
-//import colorData from './colorData.json';
-import { ColorList } from './ColorList.js';
-import { AddColorForm } from 'AddColorForm';
-//import { v4 } from 'uuid';
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
 
   {/*}
   - colorData = json-arrayen
@@ -60,20 +53,11 @@ ADDERA FÄRGER TILL STATE
   
   
 export const App = () => {
-<<<<<<< HEAD
   const [colors, setColors] = useState(colorData);
 
   return (
     <div>
       <AddColorForm
-=======
-  //const [colors, setColors] = useState(colorData);
-
-  return (
-    <div>
-      <AddColorForm />
-        {/*
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
         onNewColor={(title, color) => {
           const newColors = [
             ...colors,
@@ -86,15 +70,8 @@ export const App = () => {
           ];
           setColors(newColors);
         }}
-<<<<<<< HEAD
         />
       <ColorList
-=======
-      */}
-       
-      <ColorList />
-        {/*
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
         colors={colors}
         onRateColor={(id, rating) => {
           const newColors = colors.map(color =>
@@ -106,11 +83,7 @@ export const App = () => {
           const newColors = colors.filter(color => color.id !== id);
           setColors(newColors);
         }}
-<<<<<<< HEAD
       />
-=======
-      */}
->>>>>>> eb15521e4db6f5d164a09b7da8f25589ee58d71c
     </div>
   )
 };

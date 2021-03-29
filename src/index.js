@@ -35,7 +35,7 @@ CONTEXT
 export const ColorContext = createContext();
 
 render(
-  <ColorContext.Provider value={{ colors }}>
+  <ColorContext.Provider value={{ colorsData }}>
     <App />
   </ColorContext.Provider>,
 
