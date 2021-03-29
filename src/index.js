@@ -1,10 +1,7 @@
 import React from 'react'
 import { ColorProvider } from "./color-hooks";
 import { App } from './App'
-//import { ReactDOM } from 'react-dom';
-//import colors from './color-data';
 import { render } from 'react-dom';
-//console.log(colors)
 
 {/*
 CONTEXT
@@ -33,8 +30,6 @@ CONTEXT
 - ColorList som är Apps barn kan hämta färger direkt från Providern
 */}
 
-//export const ColorContext = createContext();
-
 render(
   <ColorProvider >
     <App />
@@ -42,7 +37,5 @@ render(
 
   document.getElementById("root")
 );
-
-//console.log(colorsData)
 
 //ReactDOM.render(<App />, document.getElementById('root'))

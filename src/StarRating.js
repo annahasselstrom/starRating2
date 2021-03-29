@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
+import React from 'react';
 import { Star } from './Star';
 
-// det utkommenterade hörde till StarRating innan ColorOrganizer adderades
 // vi vill styra hur många stjärnor som ska finnas
 // därför lägger vi till en createArray funktion för att skapa en ny array
 // och vi talar om hur lång vi vill att den nya arrayen ska vara - med hjälp av
@@ -15,10 +13,6 @@ import { Star } from './Star';
 // lägger till selectedStars = 0 eftersom selectedStars nu hämtas från data.json och
 // renderas i StarRating som är nästlad i Color
 
-{/* Add onRate event
-- hämta ny rating från den individuella stjärnan som blev klickad
-- skickar in det värdet till StarRatings parent: Color
-*/}
 const createArray = length => [...Array(length)];
 
 export const StarRating = ({
@@ -28,28 +22,23 @@ export const StarRating = ({
     onRate = f => f,
     ...props }) => {
     
-    //const [selectedStars, setSelectedStars] = useState(0);
-    //const totalStars = 5;
+    // obs - array [] i returen
     return [
-        <div style={{ margin: "20px", padding: "5px", ...style }} {...props}>
-            
-            <div>
-                {createArray(totalStars).map((star, index) => (
-                    <Star
-                        key={index}
-                        selected={selectedStars > index}
-                        onSelect={() => onRate(index + 1)}
-                        //onSelect={() => setSelectedStars(index + 1)}
-                />
-                ))}
-                <p>
-                    {selectedStars} of {totalStars} stars
-                </p>
-            </div>
+      <div style={{ margin: "20px", padding: "5px", ...style }} {...props}>
+        <div>
+          {createArray(totalStars).map((star, index) => (
+            <Star
+              key={index}
+              selected={selectedStars > index}
+              onSelect={() => onRate(index + 1)}
+            />
+          ))}
+          <p>
+            {selectedStars} of {totalStars} stars
+          </p>
         </div>
+      </div>
     ];
-
-    
 };
 
 {/*
@@ -62,5 +51,4 @@ export const StarRating = ({
   därför måste vi addera +1 för att få rätt värde/antal stjärnor
 - när setSelectedStars körs, så skickas värdet från selectedStars in i 
 - StarRating-komponenten 
-
 */}

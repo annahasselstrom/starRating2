@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
-
 // renderar en individuell stjärna 
 // använder property 'selected' för att fylla med korrekt färg
 // om ingen selected property skickas in, fylls färgen med grå by default
@@ -13,8 +12,8 @@ import { FaStar } from 'react-icons/fa';
 // funktion annars får vi fel när vi  klickar på FaStar-komponententen
 // Detta eftersom onSelects värde MÅSTE vara en funktion
 export const Star = ({ selected = false, onSelect = f => f }) => (
-    <FaStar
-        color={selected ? "red" : "pink"}
-        onClick={onSelect}
-    />
+  <FaStar
+    color={selected ? "red" : "pink"}
+    onClick={onSelect}
+  />
 );
