@@ -1,6 +1,8 @@
 //import React, { useRef } from 'react';
 import React, { useState } from 'react';
-import { useInput } from './hooks/useInput';
+import { useInput } from './hooks';
+import { useColors } from './color-hooks';
+import { ColorProvider } from './color-hooks';
 
 {/*
 - txtTitle ref referar till text inputen
@@ -59,15 +61,16 @@ ADD CUSTOM HOOK
 - till sist: resetTitle('') och resetColor('')
 - nu dags att spara de nya färgerna i state i App
 */}
-export const AddColorForm = ({ onNewColor = f => f }) => {
-    const [titleProps, resetTitle] = useInput('');
-    const [colorProps, resetColor] = useInput('#000000');
+export const AddColorForm = () => {
+  const [titleProps, resetTitle] = useInput('');
+  const [colorProps, resetColor] = useInput('#000000');
+  const { addColor } = useColors();
 
     const submit = (e) => {
-        e.preventDefault();
-        onNewColor(titleProps.value, colorProps.value);
-        resetTitle();
-        resetColor();
+      e.preventDefault();
+      addColor(titleProps.value, colorProps.value);
+      resetTitle();
+      resetColor();
     };
 
     return (
@@ -79,7 +82,8 @@ export const AddColorForm = ({ onNewColor = f => f }) => {
             required />
           <input
             {...colorProps}
-            type="color"
+          type="color"
+          value="#ff0000"
             required />
           <button>
             ADD

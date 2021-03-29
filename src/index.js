@@ -1,9 +1,10 @@
-import React, { createContext } from 'react'
-import './index.css'
+import React from 'react'
+import { ColorProvider } from "./color-hooks";
 import { App } from './App'
-import { ReactDOM } from 'react-dom';
-import  colorsData   from './colorData'
+//import { ReactDOM } from 'react-dom';
+//import colors from './color-data';
 import { render } from 'react-dom';
+//console.log(colors)
 
 {/*
 CONTEXT
@@ -32,16 +33,16 @@ CONTEXT
 - ColorList som är Apps barn kan hämta färger direkt från Providern
 */}
 
-export const ColorContext = createContext();
+//export const ColorContext = createContext();
 
 render(
-  <ColorContext.Provider value={{ colorsData }}>
+  <ColorProvider >
     <App />
-  </ColorContext.Provider>,
+  </ColorProvider>,
 
   document.getElementById("root")
 );
 
-//console.log(colors)
+//console.log(colorsData)
 
 //ReactDOM.render(<App />, document.getElementById('root'))

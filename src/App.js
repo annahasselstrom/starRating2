@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import colorData from './colorData.json';
+import React from 'react';
+//import colorData from './colorData.json';
 import { ColorList } from './ColorList.js';
 import { AddColorForm } from 'AddColorForm';
-import { v4 } from 'uuid';
+//import { v4 } from 'uuid';
 
   {/*}
   - colorData = json-arrayen
@@ -53,6 +53,17 @@ ADDERA FÄRGER TILL STATE
   
   
 export const App = () => {
+
+  return (
+    <>
+      <AddColorForm />
+      <ColorList />
+    </>
+  )
+};
+
+{/*}
+export const App = () => {
   const [colors, setColors] = useState(colorData);
 
   return (
@@ -87,3 +98,4 @@ export const App = () => {
     </div>
   )
 };
+*/}
